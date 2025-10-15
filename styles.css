@@ -1,0 +1,355 @@
+/* Configurações básicas e cores */
+:root {
+    --color-acai: #8A2BE2; 
+    --color-dark: #333;
+    --color-light: #F8F4FF;
+    --color-accent: #FFD700;
+    --font-heading: 'Arial Black', sans-serif;
+    --font-body: 'Helvetica', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 2.2;
+    
+    /* --- CONFIGURAÇÃO DA IMAGEM DE FUNDO --- */
+    background-image: url('2.png');
+    background-size:contain;
+    background-attachment:local;
+    background-position:center;
+    background-repeat: no-repeat;
+    
+
+    /* Cor de fallback caso a imagem não carregue, pode ser o roxo original */
+    background-color: #8A2BE2; 
+}
+
+/* Container principal para centralizar e limitar a largura */
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+     
+    
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--color-acai);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--color-accent);
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    margin: 0 0 5px 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 0;
+    font-style: italic;
+}
+
+/* Seções do Menu */
+.menu-section {
+    background-color: rgba(202, 163, 238, 0.85); 
+    padding: 20px;
+    margin-top: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+.menu-section h2 {
+    color: var(--color-acai);
+    border-bottom: 2px solid var(--color-light);
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+.menu-section h3 {
+    color: var(--color-dark);
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.sub-obs {
+    font-size: 0.9em;
+    color: var(--color-dark);
+    margin-bottom: 15px;
+}
+
+/* Estilo para cada item do menu */
+.menu-item-list {
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.item-price {
+    color: var(--color-acai);
+    font-weight: bold;
+    font-family: var(--font-heading);
+    font-size: 1.2em;
+}
+
+/* Observação Padrão */
+.obs-padrao {
+    background-color: #ffe0b2;
+    color: #000000;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 0.95em;
+    border-left: 5px solid var(--color-accent);
+}
+
+/* Rodapé */
+footer {
+    padding: 10px 20px;
+    margin-top: 30px;
+    background-color: var(--color-dark);
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.empty-space {
+    
+    width: 150px; 
+    visibility: hidden;
+}
+
+
+.whatsapp-link {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 10px auto;
+    text-align: center;
+    margin-right: 8px;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-link:hover {
+    background-color: #128c7e;
+}
+.whatsapp-block {
+    text-align: center;
+    margin: 0 auto; 
+}
+
+
+.social-links a {
+    
+    font-size: 2em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+/* Cor específica para o Instagram */
+.fa-instagram {
+    color: #e83052;
+}
+
+/* Cor específica para o Facebook */
+.fa-facebook-f {
+    color: #144eca;
+}
+
+.social-links a:hover {
+    color: var(--color-accent);
+    transform: scale(1.1);
+}
+
+
+footer .delivery-info {
+    display: block;
+    color: white !important;
+    font-weight: bold;
+    background-color: transparent;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 15px auto; 
+    max-width: 90%;
+    text-align: center;
+}
+
+footer .credit { 
+    font-size: 0.8em;
+    margin-top: 15px;
+    opacity: 0.7;
+    color: white;
+    background-color: transparent !important;
+    padding: 0 !important;
+    text-align: center;
+    width: 100%; 
+}
+
+/* --- ESTILOS DO GRUPO DE OFERTAS (CANTO DIREITO) --- */
+
+.group-offers-block {
+    display: flex; /* Habilita o flexbox para alinhar texto e link */
+    flex-direction: column;
+    align-items: center;
+    width: 150px; /* Garante que o bloco tenha a mesma largura do social-block */
+    text-align: center;
+}
+
+.group-text {
+    font-weight: bold;
+    font-size: 0.9em;
+    margin: 0 0 5px 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+/* Estilo do Botão (Celular) */
+.group-link {
+    display: none; /* Começa escondido, só aparece no celular */
+    background-color: #FFD700; /* Dourado/Amarelo de destaque */
+    color: var(--color-dark);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.group-link i {
+    margin-right: 5px;
+}
+
+.group-link:hover {
+    background-color: #e6c200;
+}
+
+/* Estilo da Imagem QR Code (Desktop) */
+.qr-code {
+    width: 60px; /* Define um tamanho pequeno para o QR Code */
+    height: 60px;
+    border: 2px solid white; /* Borda para destaque */
+    border-radius: 5px;
+    display: block; /* Começa visível no desktop */
+}
+
+.menu-item .item-old-price {
+    /* Mantém as propriedades de posição */
+    color:#8A2BE2;
+    font-size: 1em;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+/* NOVO CSS para a linha dupla sutil */
+.item-old-price::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+    /* Esta linha desenha o risco. O truque é usar 1px para a linha superior */
+    border-top: 1px solid #1d1d1d; 
+    
+    /* O box-shadow desenha a linha inferior. Usamos 3px de distância para dar mais espaço */
+    box-shadow: 0 3px 0 0 #1d1d1d; 
+    
+    /* Posicionamos o centro das linhas um pouco mais para cima no texto (40%) */
+    top: 40%; 
+    transform: translateY(-50%); 
+}
+
+/* --- AJUSTES DE RESPONSIVIDADE (MEDIA QUERIES) --- */
+
+@media (max-width: 600px) {
+    body {
+        background-size: cover;
+    }
+    .qr-code {
+    display: none;
+    }
+
+    /* Faz o conteúdo do footer ficar em coluna e centralizado */
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px; /* espaço entre os blocos */
+    }
+
+    .social-block,
+    .whatsapp-block,
+    .group-offers-block {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ajusta os links sociais para ficarem lado a lado centralizados */
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Centraliza o texto de entrega */
+    .delivery-info {
+        text-align: center;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+    .group-link {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;   /* deixa arredondado */
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 10px auto;     /* centraliza */
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* efeito hover */
+.group-link:hover {
+    background-color: #1ebe5b;
+}
+}
